@@ -12,4 +12,4 @@ RUN chmod +x /bts/installer_docker.sh
 ENV CONTAINER=1
 
 EXPOSE 4000
-CMD ["make run"]
+CMD ["make", "run"]
