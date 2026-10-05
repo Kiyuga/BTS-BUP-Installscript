@@ -1,4 +1,3 @@
-#FROM node:22.23.3-trixie-slim
 FROM node:20-bookworm-slim
 
 RUN apt-get update -qq && \
@@ -10,5 +9,7 @@ WORKDIR /bts
 COPY . .
 RUN chmod +x /bts/installer_docker.sh
 
+ENV CONTAINER=1
+
 EXPOSE 4000
-CMD ["/bts/installer_docker.sh"]
+CMD ["bash", "-lc", "/bts/installer_docker.sh && cd /root/bts && make run"]
