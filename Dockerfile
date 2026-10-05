@@ -1,4 +1,5 @@
-FROM node:22.23.3-trixie-slim
+#FROM node:22.23.3-trixie-slim
+FROM node:20-bookworm-slim
 
 RUN apt-get update -qq && \
 	apt-get install -qy make git \
