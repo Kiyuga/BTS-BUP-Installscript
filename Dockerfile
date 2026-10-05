@@ -11,5 +11,9 @@ RUN chmod +x /bts/installer_docker.sh
 
 ENV CONTAINER=1
 
+RUN /bts/installer_docker.sh
+
+WORKDIR /root/bts
+
 EXPOSE 4000
 CMD ["make", "run"]
