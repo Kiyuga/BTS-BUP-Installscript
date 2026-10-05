@@ -8,7 +8,7 @@ RUN apt-get update -qq && \
 WORKDIR /bts
 
 COPY . .
-RUN chmod +x /bts/installer.sh
+RUN chmod +x /bts/installer_docker.sh
 
 EXPOSE 4000
-CMD ["/bts/installer.sh"]
+CMD ["/bts/installer_docker.sh"]
